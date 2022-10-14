@@ -6,7 +6,7 @@
 #include "GameFramework/Character.h"
 #include "PlayerCharacter.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class CASTLERPG_API APlayerCharacter : public ACharacter
 {
 	GENERATED_BODY()
@@ -14,6 +14,9 @@ class CASTLERPG_API APlayerCharacter : public ACharacter
 public:
 	// Sets default values for this character's properties
 	APlayerCharacter();
+
+	UPROPERTY(BlueprintReadWrite, Category = Input)
+	float short_click;
 
 protected:
 	// Called when the game starts or when spawned
