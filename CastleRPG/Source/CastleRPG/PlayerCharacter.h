@@ -15,8 +15,13 @@ public:
 	// Sets default values for this character's properties
 	APlayerCharacter();
 
-	UPROPERTY(BlueprintReadWrite, Category = Input)
-	float short_click;
+	//UPROPERTY(BlueprintCallable, Category = PlayerStatus)
+	bool clicking;
+	bool isAttacking;
+	bool saveAttack;
+	int attackCount;
+	float minEnemyDistance;
+	//UNiagaraSystem* FXCursor;
 
 protected:
 	// Called when the game starts or when spawned
